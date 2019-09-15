@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="sinhvien">
+            <table class="table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th colspan="4" style="background:#ecf0f1"><i class="fa fa-table"></i> Danh sach sinh vien</th>
+                    </tr>
+                    <tr>
+                        <th>LastName</th>
+                        <th>FirstName</th>
+                        <th>EnrollData</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr *ngFor='let p of students'>
+                        <td>{{p.LastName}}</td>
+                        <td>{{p.FirstMidName}}</td>
+                        <td>{{p.EnrollmentDate}}</td>
+                        <td><a [routerLink]="['/dssinhvien',p.ID]"><i class="fa fa-info-circle"
+                                    style="color: #15aabf;"></i></a><i class="fa fa-trash"></i></td>
+                    </tr>
+                </thead>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

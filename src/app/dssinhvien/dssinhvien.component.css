@@ -1,0 +1,20 @@
+.sinhvien {
+    width: 1000px;
+}
+button {
+    margin-left: 2%;
+}
+.table {
+    border: 1px solid #d8d8d8;
+}
+tr th {
+    border: 1px solid #d8d8d8;
+}
+
+tr td {
+    border: 1px solid #d8d8d8;
+}
+td i {
+    font-size: 30px;
+    margin-left: 3%;
+}
