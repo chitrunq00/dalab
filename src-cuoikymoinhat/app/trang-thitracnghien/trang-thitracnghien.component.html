@@ -1,0 +1,25 @@
+
+<div class="a" style="background:aliceblue; width: 1350px; margin: 15px 50px;" >
+    
+
+        <div class="tracnghiem" *ngFor="let product of quiz | paginate: { itemsPerPage: itemperpage, currentPage: curpage }">
+            <div><h5>Thời gian:<b id="dongho"></b></h5></div>
+       <h3><p>{{product.Text}}</p></h3> 
+        <ul *ngFor='let f of product.Answers'>
+            <li>
+                <input id="choice1A" value="A" name="choice1" type="radio"><label style="margin-left: 3%;"
+                    id="C1A">{{f.Text}}</label><br>
+            </li>
+        </ul>
+        <h5> <p>Tổng số câu: {{socauhoi()}}</p></h5>
+        <input type="submit" class="btn btn-primary" value="Nộp Bài">
+        <h5 class="card-footer text-center" style="margin-top: 2%;">
+                <pagination-controls (pageChange)="curpage = $event"></pagination-controls>
+            </h5>
+       
+       
+        
+    
+    
+    </div>
+</div>
