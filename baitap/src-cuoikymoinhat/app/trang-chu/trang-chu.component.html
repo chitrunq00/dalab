@@ -1,0 +1,41 @@
+<div class="body">
+  <div class="row">
+    <div class="col-sm-8">
+      <section>
+        <div class="container">
+          <div class="row">
+            <!-- truyen du lieu mon hoc -->
+            <div class="col-md-6" style="padding-bottom: 15px"
+              *ngFor='let a of Subjects | paginate:{ itemsPerPage: 4, currentPage: page}'>
+              <div class="card">
+                <div class="card-body">
+                  <a [routerLink]="['/traloicauhoi',a.Id]"> <img class="" src="assets/images/logos/{{a.Logo}}"
+                      class="mx-auto d-block"></a>
+                </div>
+                <div class="card-footer" style="text-align: center">
+                  <h4>{{a.Name}}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center" style="margin-left: 25%;">
+              <pagination-controls (pageChange)="page = $event"></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="col-sm-4">
+      <aside>
+        <table class="table">
+          <thead class="thead-light">
+            <h4 style="background: springgreen;"><img src="assets/images/mucluc.jpg" width="70px" height="50px"> Danh
+              mục môn học</h4>
+            <tr *ngFor="let a of Subjects">
+              <th> <a [routerLink]="['/traloicauhoi',a.Id]">{{a.Name}}</a></th>
+            </tr>
+          </thead>
+        </table>
+      </aside>
+    </div>
+  </div>
+</div>
